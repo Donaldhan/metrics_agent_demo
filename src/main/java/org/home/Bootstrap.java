@@ -1,11 +1,6 @@
 package org.home;
 
-/**
- * @ClassName: Bootstrap
- * @Description:
- * @Author: Donaldhan
- * @Date: 2020-04-08 15:04
- */
+
 
 import com.alibaba.metrics.integrate.ConfigFields;
 import com.alibaba.metrics.integrate.LoggerProvider;
@@ -13,7 +8,12 @@ import com.alibaba.metrics.integrate.MetricsIntegrateUtils;
 import com.alibaba.metrics.rest.server.MetricsHttpServer;
 
 import java.util.Properties;
-
+/**
+ * @ClassName: Bootstrap
+ * @Description:
+ * @Author: Donaldhan
+ * @Date: 2020-04-08 15:04
+ */
 public class Bootstrap {
 
     private static MetricsHttpServer metricsHttpServer = null;
