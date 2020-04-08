@@ -13,8 +13,8 @@ public class Main {
     private final static Logger log = Logger.getLogger("org.home.Main");
     public static void main(String[] args) {
         log.info("start metrics...");
-//        Bootstrap.init();
-        Bootstrap.init("metrics-conf.properties");
+        Bootstrap.init();
+//        Bootstrap.init("metrics-conf.properties");
         log.info("metrics servers is listen on 8006");
     }
 }

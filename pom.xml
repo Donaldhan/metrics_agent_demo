@@ -16,38 +16,45 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <metrics.version>2.0.1</metrics.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>com.alibaba.middleware</groupId>
             <artifactId>metrics-core-api</artifactId>
-            <version>2.0.6</version>
+            <version>${metrics.version}</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba.middleware</groupId>
             <artifactId>metrics-core-impl</artifactId>
-            <version>2.0.6</version>
+            <version>${metrics.version}</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba.middleware</groupId>
             <artifactId>metrics-os</artifactId>
-            <version>2.0.6</version>
+            <version>${metrics.version}</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba.middleware</groupId>
             <artifactId>metrics-integration</artifactId>
-            <version>2.0.6</version>
+            <version>${metrics.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.alibaba.middleware</groupId>
+                    <artifactId>metrics-druid</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
             <groupId>com.alibaba.middleware</groupId>
             <artifactId>metrics-rest</artifactId>
-            <version>2.0.6</version>
+            <version>${metrics.version}</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba.middleware</groupId>
             <artifactId>metrics-druid</artifactId>
-            <version>2.0.6</version>
+            <version>${metrics.version}</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
