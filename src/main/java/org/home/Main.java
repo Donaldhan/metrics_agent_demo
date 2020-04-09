@@ -17,6 +17,7 @@ public class Main {
         log.info("start metrics...");
         Bootstrap.init();
 //        Bootstrap.init("metrics-conf.properties");
-        log.info("metrics servers is listen on 8006");
+        log.info("metrics servers is listen on :{}",Bootstrap.getServerPort());
+//        log.info("metrics servers is listen on :8006");
     }
 }

@@ -21,6 +21,9 @@ import java.util.Properties;
 public class Bootstrap {
     private final static Logger log = LoggerFactory.getLogger(Bootstrap.class);
     private static final String METRICS_CONFIG_FILE = "metrics-conf.properties";
+    private static final String ALI_METRICS_HTTP_PORT = "com.alibaba.metrics.http.port";
+    private static final String DEFAULT_PORT = "8006";
+    private static  Properties config = new Properties();;
     /**
      *
      */
@@ -39,7 +42,7 @@ public class Bootstrap {
         log.info("start init metrics config...");
         LoggerProvider.initLogger();
 //        Properties config = MetricsIntegrateUtils.parsePropertiesFromFile(configFile);
-        Properties config = loadMetricsConfig();
+        config = loadMetricsConfig();
         if (configFile != null) {
             config.setProperty(ConfigFields.CONFIG_FILE_NAME, configFile);
         }
@@ -55,13 +58,20 @@ public class Bootstrap {
      */
     private static Properties loadMetricsConfig(){
         InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(METRICS_CONFIG_FILE);
-        Properties config = new Properties();
         try {
             config.load(inputStream);
+            System.setProperty(ALI_METRICS_HTTP_PORT, String.valueOf(config.getOrDefault(ALI_METRICS_HTTP_PORT, DEFAULT_PORT)));
         } catch (Exception e) {
             log.error("loadMetricsConfig error", e);
         }
         return config;
+    }
+
+    /**
+     * @return
+     */
+    public static String getServerPort(){
+          return   System.getProperty(ALI_METRICS_HTTP_PORT, DEFAULT_PORT);
     }
     /**
      *
