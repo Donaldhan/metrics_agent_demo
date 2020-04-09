@@ -1,6 +1,8 @@
 package org.home;
 
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * http://localhost:8006/metrics/list
@@ -10,7 +12,7 @@ import java.util.logging.Logger;
  * @Date: 2020-04-08 15:05
  */
 public class Main {
-    private final static Logger log = Logger.getLogger("org.home.Main");
+    private final static Logger log = LoggerFactory.getLogger(Main.class);
     public static void main(String[] args) {
         log.info("start metrics...");
         Bootstrap.init();
