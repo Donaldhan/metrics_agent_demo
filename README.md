@@ -1,7 +1,13 @@
 # metrics_demo
 https://github.com/alibaba/metrics/wiki
 
+支持度量项：  
+https://github.com/alibaba/metrics/wiki/supported-metrics-list  
 
+**系统网络net检查项，window环境没有，linux环境下才有**
+
+自定义配置：
+https://github.com/alibaba/metrics/wiki/customization
 
 ## http接口查询
 https://github.com/alibaba/metrics/wiki/query-from-http
@@ -35,10 +41,19 @@ test metric agent demo
 https://github.com/Donaldhan/metrics_server_demo
 
 # usage
-首先使用maven-jar-plugin插件进行打包;
+
+
+
+```
+mvn package
+```
+
 将打包后端后的jar，上传到服务器，执行如下命令即可；
 
 ```
 java -jar metrics_agent_demo-1.0-SNAPSHOT.jar -p 8888
 ```
-
+添加执行权限
+```
+chmod 755 metrics_agent_demo-1.0-SNAPSHOT-jar-with-dependencies.jar
+```
