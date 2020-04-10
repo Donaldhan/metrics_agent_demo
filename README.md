@@ -1,6 +1,10 @@
 # metrics_demo
 https://github.com/alibaba/metrics/wiki
 
+# metric server
+test metric agent demo  
+https://github.com/Donaldhan/metrics_server_demo
+
 ## http接口查询
 https://github.com/alibaba/metrics/wiki/query-from-http
 
