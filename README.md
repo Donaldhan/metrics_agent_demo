@@ -1,9 +1,7 @@
 # metrics_demo
 https://github.com/alibaba/metrics/wiki
 
-# metric server
-test metric agent demo  
-https://github.com/Donaldhan/metrics_server_demo
+
 
 ## http接口查询
 https://github.com/alibaba/metrics/wiki/query-from-http
@@ -31,3 +29,16 @@ http://localhost:8006/metrics/system/system.cpu.idle
 
 ### 数据量大的问题的解决方案
 针对数据量大的问题，只保留3个月的数据
+
+# metric server
+test metric agent demo  
+https://github.com/Donaldhan/metrics_server_demo
+
+# usage
+首先使用maven-jar-plugin插件进行打包;
+将打包后端后的jar，上传到服务器，执行如下命令即可；
+
+```java
+java -jar metrics_agent_demo-1.0-SNAPSHOT.jar -p 8888
+```
+
