@@ -38,7 +38,7 @@ https://github.com/Donaldhan/metrics_server_demo
 首先使用maven-jar-plugin插件进行打包;
 将打包后端后的jar，上传到服务器，执行如下命令即可；
 
-```java
+```
 java -jar metrics_agent_demo-1.0-SNAPSHOT.jar -p 8888
 ```
 
