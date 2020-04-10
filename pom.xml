@@ -128,7 +128,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.xxg.Main</mainClass>
+                            <mainClass>org.home.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
