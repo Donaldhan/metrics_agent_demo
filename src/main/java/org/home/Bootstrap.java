@@ -32,7 +32,6 @@ public class Bootstrap {
      *
      */
     public static void init() {
-//        init(System.getProperty(ConfigFields.CONFIG_FILE_NAME));
         init(METRICS_CONFIG_FILE);
     }
     /**
