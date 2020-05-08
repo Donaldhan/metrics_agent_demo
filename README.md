@@ -51,16 +51,16 @@ mvn package
 将打包后端后的jar，上传到服务器，执行如下命令即可；
 
 ```
-java -jar metrics_agent_demo-1.0-SNAPSHOT.jar -p 8888
+java -jar metrics_agent-1.0.0-jar-with-dependencies.jar -p 8888
 ```
 启动守护进程
 ```
-nohup java -jar metrics_agent-1.0.jar > logs/metrics_out.log 2>&1 &
+nohup java -jar metrics_agent-1.0.0-jar-with-dependencies.jar > logs/metrics_out.log 2>&1 &
 ```
 
 添加执行权限
 ```
-chmod 755 metrics_agent_demo-1.0-SNAPSHOT-jar-with-dependencies.jar
+chmod 755 metrics_agent-jar-with-dependencies.jar
 ```
 
 
