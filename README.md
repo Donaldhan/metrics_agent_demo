@@ -53,7 +53,15 @@ mvn package
 ```
 java -jar metrics_agent_demo-1.0-SNAPSHOT.jar -p 8888
 ```
+启动守护进程
+```
+nohup java -jar metrics_agent-1.0.jar > logs/metrics_out.log 2>&1 &
+```
+
 添加执行权限
 ```
 chmod 755 metrics_agent_demo-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
+
+
+
