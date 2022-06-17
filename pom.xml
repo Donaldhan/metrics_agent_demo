@@ -17,7 +17,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <metrics.version>2.0.1</metrics.version>
-        <alibaba.fastjson.version>1.2.58</alibaba.fastjson.version>
+        <alibaba.fastjson.version>1.2.83</alibaba.fastjson.version>
     </properties>
     <dependencies>
         <dependency>
